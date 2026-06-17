@@ -75,7 +75,47 @@ Project Managers coordinate delivery activities, manage schedules, risks, and co
 
 ---
 
-## How these personas are used in the exercise
-- Use these persona definitions to frame scenarios and sample interactions in the Skills Exercise.
-- Each persona can be used as a persona prompt for Copilot Spaces to shape role-specific guidance.
+## New / Additional Personas (Added)
 
+These personas were added to reduce role ambiguity, speed onboarding, and clarify escalation and handoffs.
+
+### Delivery Lead
+- Responsibilities: Owns day-to-day delivery cadence, coordinates across squads, manages sprint commitments, tracks blockers and ensures timely escalation.
+- Decision authority: Prioritizes work within a sprint and approves changes to sprint scope in collaboration with the PM.
+- Interactions: Works with the Product Manager (PM) for priorities, with the Technical Lead for trade-offs, and with QA to ensure acceptance criteria are testable.
+- Typical handoffs: Receives prioritized backlog from PM, hands off acceptance criteria to QA, escalates unresolved blockers to PM or Project Manager.
+
+### Technical Lead
+- Responsibilities: Sets architecture and design approaches, mentors developers, reviews complex PRs, ensures technical quality and maintainability.
+- Decision authority: Makes technical design decisions within agreed constraints and can approve technical exceptions.
+- Interactions: Works with Developers on implementation details, with Delivery Lead to align scope and schedule, and with PM on feasibility and risk.
+- Typical handoffs: Provides technical design docs to developers, hands off deployment plans to Release Lead.
+
+### Support Lead / On-call Engineer
+- Responsibilities: First responder for incidents, maintains runbooks and playbooks, coordinates post-incident reviews, and identifies fixes or mitigations.
+- Decision authority: Initiates incident response and triage; coordinates rollbacks when required in consultation with Release Lead.
+- Interactions: Notifies PM/Project Manager for customer-impacting incidents, works with Developers for fixes, and escalates to Security when necessary.
+- Typical handoffs: Escalates incident summaries to stakeholders and hands off root cause analysis outputs to the team.
+
+### Data Analyst / Observability Owner
+- Responsibilities: Define success metrics, build and maintain dashboards, analyze release and incident impact, and recommend measurement approaches.
+- Decision authority: Defines what instrumentation and metrics to track for release validation (in collaboration with PM and Tech Lead).
+- Interactions: Collaborates with PM to set metrics and targets, with Developers to implement instrumentation, and with Release Lead to validate rollouts.
+- Typical handoffs: Provides dashboards and post-release analysis to PM and stakeholders.
+
+### Release Lead
+- Responsibilities: Coordinates release activities, verifies pre-release checklists, owns rollback plans and deployment communications.
+- Decision authority: Authorizes production deployment windows and initiates rollback when post-release checks fail.
+- Interactions: Works with Delivery Lead, QA, and Support Lead during deployments; collaborates with Technical Lead to ensure release readiness.
+- Typical handoffs: Posts release summaries, notifies stakeholders, and updates release notes.
+
+### UX/Design Representative (when applicable)
+- Responsibilities: Ensure product changes meet usability and accessibility goals, provide design assets and acceptance criteria.
+- Interactions: Works with PM to align on user needs and with Developers to clarify design details.
+
+---
+
+## How to use these persona entries
+- Each project should indicate which personas are assigned and who the named owners are in the project README.
+- For cross-functional handoffs, include the flow (who notifies whom, and typical SLAs) in the relevant docs or runbooks.
+- Keep the persona list lean; add personas only when they provide clear ownership or change the decision path.
